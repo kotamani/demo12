@@ -1,0 +1,78 @@
+1.django-admin startproject demo12
+2.python manage.py startapp emp
+3. open to emp/model.py
+
+4. go to setting.py
+    INSTALLED_APPS = [
+    'emp.apps.EmpConfig',
+    ]
+
+5.admin.py
+    from django.contrib import admin
+    from emp.models import Emp
+    admin.site.register(Emp)
+
+6. open terminal
+   python manage.py makemigrations emp
+   python manage.py sqlmigrate emp
+   python manage.py migrate
+
+7. create super user
+    python manage.py createsuperuser
+
+        from django.contrib import admin
+        from django.conf.urls import url
+        from emp.views import home,saverow,getallrows,updaterow,delectrow
+        urlpatterns = [
+            url('admin/', admin.site.urls),
+            url(r'^$',home),
+            url(r'save',saverow),
+            url(r'all',getallrows),
+            url(r'update',updaterow),
+            url(r'delete',delectrow),
+        ]
+8. emp/views.py
+        from django.shortcuts import render
+        from emp.models import Emp
+        from django.http import HttpResponse
+
+        def home(request):
+            return HttpResponse('<h1>Welcome to Home Page</h1>')
+        def saverow(request):
+            v1 = 'K Ajay'
+            v2 = 45000
+            v3 ='ajay'
+            v4 = 'apple'
+            v5 = 'hyd'
+            s1 = Emp(ename=v1, esalary=v2, userid=v3, pswd=v4, address=v5)
+            s1.save()
+            return HttpResponse('<h1> Ur record is saved </h1>')
+
+
+        def getallrows(request):
+            rows = Emp.objects.all()
+            print('Type=',type(rows))
+            return HttpResponse('<h1>Ur rows arean conosle</h1>')
+
+        def updaterow(request):
+            row = Emp.objects.get(userid='ajay')
+            row.ename='K Ajay'
+            row.esalary = 55000
+            row.save()
+            return HttpResponse('<h1>records is updates</h1>')
+
+        def delectrow(request):
+            row = Emp.objects.get(userid='ajay')
+            row.delete()
+            return HttpResponse('<h1>records is delete</h1>')
+
+
+-> runserver
+    127.0.01:8000/admin -> admin page
+    127.0.01:8000/all   -> getallrows
+    127.0.01:8000/delete   -> delecte data
+    127.0.01:8000/update   -> update the data
+
+
+
+
