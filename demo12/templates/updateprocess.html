@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form action="{% url 'updateprocess1'%}">
+    <table align="center" cellpadding="5px" cellspacing="5px" border="1px">
+        <caption><h1> Student Edit Form</h1></caption>
+        <tr><th>FullName</th><td><input type="text" name="n1" value= {{row.fullname}}></td></tr>
+        <tr><th>User Id</th><td><input type="text" name="n2" value={{row.userid}} readonly></td></tr>
+        <tr><th>Password</th><td><input type="text" name="n3" value={{row.pwd}}></td></tr>
+        <tr><th>Address</th><td><input type="text" name="n4" value={{row.address}}></td></tr>
+
+        <tr>
+            <td><input type="submit" value="Modify"></td>
+            <td><input type="reset" value="clear"></td>
+        </tr>
+
+    </table>
+    </form>
+<a href="{% url 'homel'%}">Home</a>
+
+
+</body>
+</html>

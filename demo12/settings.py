@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '^gb#ym-^13hndj%ztfbb4+m!tn1mjz$(0xsg9$m@13&3$2_%jr'
+SECRET_KEY = '3o)0olklp-h(vxo7r8v%*4d@nr(^5h&&oe#^l(a3lol_uv*zyj'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'emp.apps.EmpConfig',
+    'student.apps.StudentConfig',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'demo12.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['demo12/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Title</title>
+</head>
+<body>
+    <h1>Home to Page</h1>
+    <ol>
+        <li>
+            Student <a href="{% url 'regl'%}"> Sign Up</a>
+        </li>
+        <li>
+            Registered Student <a href="{% url 'show'%}">list</a>
+        </li>
+        <li>
+            Registered Student <a href="{% url 'showone'%}">Details</a>
+        </li>
+        <li>
+            Update <a href="{% url 'updateform'%}">Details</a>
+        </li>
+        <li>
+            Delete <a href="{% url 'deleteform'%}">Details</a>
+        </li>
+    </ol>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <table align="center" cellpadding="5px" cellspacing="5px" border="1px">
+        <caption><h1>All Registered Student details are</h1></caption>
+        <thead>
+                <tr><th>FullName</th><th>User Id</th>
+                <th>Password</th>
+                    <th>Address</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    {% for i in rows %}
+                    <td>{{i.fullname}}</td>
+                    <td>{{i.userid}}</td>
+                    <td>{{i.pwd}}</td>
+                    <td>{{i.address}}</td>
+                </tr>
+         {% endfor %}
+        </tbody>
+    </table>
+<a href="{% url 'homel'%}">Home</a>
+
+
+</body>
+</html>

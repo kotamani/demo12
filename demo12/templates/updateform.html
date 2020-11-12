@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form action="{% url 'updateprocess'%}">
+    <table align="center" cellpadding="5px" cellspacing="5px" border="1px">
+        <caption><h1>Enter User Id Update details</h1></caption>
+        <tr>
+            <td><label>Enter UserID :</label></td>
+            <td><input type="text" name="n1"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Update"></td>
+            <td><input type="reset" value="clear"></td>
+        </tr>
+    </table>
+</form>
+<a href="{% url 'homel'%}">Home</a>
+</body>
+</html>

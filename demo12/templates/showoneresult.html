@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <table align="center" cellpadding="5px" cellspacing="5px" border="1px">
+        <caption><h1>All Registered Student details are</h1></caption>
+        <thead>
+                <tr><th>FullName</th><th>User Id</th><th>Password</th><th>Address</th></tr>
+        </thead>
+        <tbody>
+                <tr><td>{{row.fullname}}</td><td>{{row.userid}}</td>
+                    <td>{{row.pwd}}</td><td>{{row.address}}</td></tr>
+        </tbody>
+    </table>
+<a href="{% url 'homel'%}">Home</a>
+
+
+</body>
+</html>

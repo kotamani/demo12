@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>reg</title>
+    <style>
+        *{margin:10px;padding:10px;}
+    </style>
+</head>
+<body>
+    <h1>Sign Up Form</h1>
+    <form action="{% url 'regprocessl'%}">
+        FullName : <input type="text" name="n1"><br>
+        UserId : <input type="text" name="n2"> <br>
+        Password : <input type="password" name="n3"><br>
+        Address : <input type="text" name="n4"><br>
+        <input type="submit" value="register" ><br>
+
+
+    </form>
+
+<a href="{% url 'homel'%}">Home</a>
+</body>
+</html>
